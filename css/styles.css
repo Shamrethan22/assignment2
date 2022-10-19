@@ -1,0 +1,29 @@
+html, body{
+	background-color: beige;
+}
+
+#map {
+	align-self: center;
+}
+
+#title {
+	text-align: center;
+	padding: 10px 0 10px;
+	color: black;
+	background-color: #76d1dc;
+}
+.viz-container {
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	margin-top: 20px;
+	display: flex;
+}
+
+p {
+	font-family: 'Montserrat';
+}
+
+h1 {
+	font-family: 'Montserrat';
+}

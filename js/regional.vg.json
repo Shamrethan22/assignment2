@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Affect of Region on Ladder Score",
+    "description": "A scatterplot showing region and Ladder score",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Shamrethan22/3179/main/assignment2/data/world-happiness-report-2021.csv"
+    },
+    "mark": {"type": "circle", "tooltip": true},
+    "encoding": {
+      "x": {
+        "field": "Ladder score",
+        "type": "quantitative",
+        "scale": {"zero": false}
+      },
+      "y": {
+        "field": "Logged GDP per capita",
+        "type": "quantitative",
+        "scale": {"zero": false}
+      },
+      "color": {"field": "Regional indicator", "type": "nominal"}
+    }
+  }

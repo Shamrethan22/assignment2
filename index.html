@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Happiness around the World 2021</title>
+</head>
+<body>
+  <div class="page">
+
+    <div id="header">
+      <h1 id="title">
+        Happiness around the World in 2021
+      </h1>
+    </div>
+
+    <div class="viz-container" style="width: 100%;">
+      <div>
+        <div id="map"></div>
+        <p>
+          The World map showcase the Hapiness of People around the world in each Country in the year 2021.
+        </p>
+      </div>
+    </div>
+
+    <div class="viz-container" style="width: 100%;">
+      <div>
+        <div id="topgdp"></div>
+        <p>
+          The Bar chart presents the GDP of Countries with Ladder Score greater than 7. This shows the relationship between Happiness and the GDP of a Country. If the GPD of the Country is high, the citizens are Happier. Countries with high Ladder Score consits of Australia, Austria, Canada, Costa Rica, Denmark, Finland, Germany, Ice Land, Ire Land, Israel, Luxembourg, Netherlands, New Zealand, Norway, Sweden, Switzerland and United Kingdom.
+        </p>
+      </div>
+      <div>
+        <div id="top10countries"></div>
+        <p>
+          The Chart above presents which Countries have a population with their Happiness greater than the Ladder Score of 7. Countries with high Ladder Score consits of Australia, Austria, Canada, Costa Rica, Denmark, Finland, Germany, Ice Land, Ire Land, Israel, Luxembourg, Netherlands, New Zealand, Norway, Sweden, Switzerland and United Kingdom.
+        </p>
+      </div>
+    </div>
+
+    <div class="viz-container" style="width: 100%;">
+      <div>
+        <div id="regional"></div>
+        <p>
+          The regional Chart presents which regions have the population with High Hapiness in the Year 2021. From the chart you can observe that Western Europe has the highest number of Countries with high GDP and Ladder Score inidicating high Happiness.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <script type="text/javascript">
+
+    var spec1 = "js/map.vg.json";
+    var spec2 = "js/regional.vg.json";
+    var spec3 = "js/top10countries.vg.json";
+    var spec4 = "js/topgdp.vg.json";
+
+
+
+    vegaEmbed('#map', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#regional', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#top10countries', spec3).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#topgdp', spec4).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+  </script>
+
+</body>
+</html>

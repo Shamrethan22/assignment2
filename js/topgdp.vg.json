@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Affect of GDP of Countries on Ladder Score",
+    "description": "Bar Chart with GDP of Top Countries with Ladder socre greater than 7",
+    "transform": [
+        {"filter": "datum['Ladder score'] > 7"}
+      ],
+    "data": {
+      "url": "https://raw.githubusercontent.com/Shamrethan22/3179/main/assignment2/data/world-happiness-report-2021.csv"
+    },
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": { "field": "Logged GDP per capita", "type": "quantitative", "sort":"ascending"},
+      "y": {"field": "Country name", "type": "nominal"}
+    }
+  }
+
+  

@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Countries with high Ladder Score",
+    "description": "Pie Chart with Top Countries with Ladder socre greater than 7",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Shamrethan22/3179/main/assignment2/data/world-happiness-report-2021.csv"
+    },
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Ladder score", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "Country name", "type": "nominal"}
+    },
+    "transform": [
+      {"filter": "datum['Ladder score'] > 7"}
+    ]
+  }
+
+  
